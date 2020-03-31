@@ -1,9 +1,9 @@
 ==================================================================
-Student assignment work for Coursera "Get and Clean" course project based on manipulation of on data from:
+Student assignment work for Coursera "Getting and Cleaning Data" course project based on manipulation of on data from:
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
 ==================================================================
-Mark Brantana Get and Clean course Project based on manipulation of on data from:
+Mark Brantana "Getting and Cleaning Data" course Project based on manipulation of on data from:
 Submitted 03/30/2020
 Project based on manipulation of on data from:
 

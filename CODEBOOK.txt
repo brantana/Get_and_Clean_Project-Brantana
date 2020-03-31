@@ -1,3 +1,5 @@
+Student assignment work for Coursera "Getting and Cleaning Data" course project
+
 For this assignment:
 
 The zip file was downloaded from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. The data was saved locally unpacked and the files reviewed for consistency. Three basic file sets were provided:
