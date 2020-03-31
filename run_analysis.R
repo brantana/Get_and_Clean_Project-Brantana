@@ -94,5 +94,3 @@ unzip("downloaded.zip")
 #~~~THE END ~~~#
 #~~~~~~~~~~~~~~#
 write.table(Set_1,file="Set_1.txt",row.name=FALSE)
-write.table(Set_2,file="Set_2.txt",row.name=FALSE)
-
