@@ -1,4 +1,5 @@
 ==================================================================
+
 Student assignment work for Coursera "Getting and Cleaning Data" course project based on manipulation of on data from:
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
