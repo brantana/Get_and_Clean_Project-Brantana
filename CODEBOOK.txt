@@ -1,0 +1,29 @@
+For this assignment:
+
+The zip file was downloaded from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. The data was saved locally unpacked and the files reviewed for consistency. Three basic file sets were provided:
+1. An overall set containing activity index information and header information common to the other two file sets.
+2. A training set consisting of a file containing participating subject information, a corresponding file with training activity training information, and corresponding file with processed training data.
+3. A test set consisting of a file containing participating subject information, a corresponding file with training activity training information, and corresponding file with processed training data.
+Note: All pertinent data was reviewed, extracted to datafiles for further processing as described below.
+Note: Items 2. & 3. further contained "raw" data files which were not used as they were not pertinent to this assignment.
+
+Assignment - Overall tidy dataset.
+These data sets were combined and extracted to produce a tidy data set (Set_1) of the overall means and averages as follows:
+1. The three files training files were combined column-wise by column to produce a unified file of training data.
+2. Likewise, the three test files were combined column-wise in a like order to the training files to produce a unified file of test data.
+3. The new training and test files were combined row-wise to produce a single overall dataset.
+4. Generic column headings were replaced with descriptive headings using the overall set of header information.
+5. Indexed activity data was replaced with descriptive headings using the activity index.
+6. The final set (Set_1) was produced by maintaining identifying columns and column headings containing partial strings of either "mean()" or "std()". Care was taken to disclude inconsistent columns containing "meanFrequency()" or similar.
+
+Assignment - tidy subset, from Overall tidy dataset, with subject data row averages and row standard deviations.
+Set_1 was utilized to produce this subset (Set_2) as follows:
+1. A new file (Set_2) was produced containing only the identifying columns from Set_1.
+2. Another file was produced containing only the data columns from Set_1, and from this, row means and row a standard deviations were developed.
+3. The final set (Set_2) was produced by adding only the row mean and row a standard deviation columns.
+
+Notes:
+a. All variables are unitless.
+b. The downloaded zip file were unzipped and converted to data tables (dataframes) for further processing.
+c. Refer to script comments for additional details regarding file and data processing.
+
