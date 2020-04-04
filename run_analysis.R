@@ -71,26 +71,27 @@ unzip("downloaded.zip")
 #*****This first dataset is called Set_1*****
           Set_1<-dat[1:3]
           for(i in 4:564){
-          string<-names(dat[i])
-          pattern<-"mean\\()|std\\()"#Include only columns with "mean()" or "std()".  Exclude for example,"meanFreq()". 
-          tmp<-grepl(pattern,string)
-          if(tmp){Set_1<-cbind(Set_1,dat[i])}
+                string<-names(dat[i])
+                pattern<-"mean\\()|std\\()"#Include only columns with "mean()" or "std()".  Exclude for example,"meanFreq()". 
+                tmp<-grepl(pattern,string)
+                if(tmp){Set_1<-cbind(Set_1,dat[i])}
           }
           n<-ncol(Set_1)#Gives number of columns remaining in Set_1, which was produced from Dat_1.
 
 #(- PROJECT REQUIREMENT 5 - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.)
 #PRODUCE A SECOND SET OF DATA WITH AVERAGES FOR ALL FEATURES.
 #*****This second dataset is called Set_2
-          Set_2<-dat[1:3]
-          tmp<-Set_1[,4:n]
-          means<-rowMeans(tmp)
-          library(tidyverse)
-          stdevs<-tmp%>% rowwise() %>% mutate(sd = sd(c(1:10299)))
-          #stdevs<-tmp%>% rowwise() %>% mutate(sd = sd(c(1:10299)))
-          #for(#std<-rowSd(tmp)
-          Set_2<-cbind(Set_2,means,stdevs$sd)
+          m<- n-3
+          Set_2<-Set_1[1:3]
+          for(i in 4:m){
+                  string<-names(Set_1[i])
+                  pattern<-"mean\\()"#Include only columns with "mean()". 
+                  tmp<-grepl(pattern,string)
+                  if(tmp){Set_2<-cbind(Set_2,Set_1[i])}
+          }         
           
 #~~~~~~~~~~~~~~#
 #~~~THE END ~~~#
 #~~~~~~~~~~~~~~#
 write.table(Set_1,file="Set_1.txt",row.name=FALSE)
+write.table(Set_2,file="Set_2.txt",row.name=FALSE)

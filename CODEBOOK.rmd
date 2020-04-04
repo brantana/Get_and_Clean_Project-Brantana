@@ -22,7 +22,7 @@ Assignment - tidy subset, from Overall tidy dataset, with subject data row avera
 Set_1 was utilized to produce this subset (Set_2) as follows:
 1. A new file (Set_2) was produced containing only the identifying columns from Set_1.
 2. Another file was produced containing only the data columns from Set_1, and from this, row means and row a standard deviations were developed.
-3. The final set (Set_2) was produced by adding only the row mean and row a standard deviation columns.
+3. The final set (Set_2) was produced from Set_1 to contain only the mean activity values.
 
 Notes:
 a. All variables are unitless.
